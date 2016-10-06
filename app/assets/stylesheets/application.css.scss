@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* The changes made to default variables for the nav-bar menu item link-hover color and decoration (default is underlined) */
+$link-hover-color:      #FFFFFF;
+$link-hover-decoration: font-weight-bold;
+
+/* The changes to default variables to make the link text color, link color when hovered, and the background of the specific nav-bar menu item */
+$navbar-default-link-color: #3BA9E4;
+$navbar-default-link-hover-color: #FFFFFF;
+$navbar-default-link-hover-bg: lighten(#3BA9E4, 25%);
+
+/* The changes made to default variables to make the nav-bar menu item text color, and its corresponding background */
+$navbar-default-link-active-color: #FFFFFF;
+$navbar-default-link-active-bg: #3BA9E4;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+    height: 100%;
+    background-color: #34495e;
+}
+
+body {
+    background-color: white;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin: 0 auto;
+}
+
+#footer {
+    height: 60px;
+    width: 80%;
+    background-color: #DEDEDE;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.page-header {
+    margin: 0 auto;
+}
+
+
