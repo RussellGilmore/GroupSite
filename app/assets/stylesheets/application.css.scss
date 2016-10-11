@@ -13,20 +13,16 @@
  *= require_tree .
  *= require_self
  */
-
- /* The changes made to default variables for the nav-bar menu item link-hover color and decoration (default is underlined) */
-$link-hover-color:      #FFFFFF;
+/* The changes made to default variables for the nav-bar menu item link-hover color and decoration (default is underlined) */
+$link-hover-color: #FFFFFF;
 $link-hover-decoration: font-weight-bold;
-
 /* The changes to default variables to make the link text color, link color when hovered, and the background of the specific nav-bar menu item */
 $navbar-default-link-color: #3BA9E4;
 $navbar-default-link-hover-color: #FFFFFF;
 $navbar-default-link-hover-bg: lighten(#3BA9E4, 25%);
-
 /* The changes made to default variables to make the nav-bar menu item text color, and its corresponding background */
 $navbar-default-link-active-color: #FFFFFF;
 $navbar-default-link-active-bg: #3BA9E4;
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -58,5 +54,3 @@ body {
 .page-header {
     margin: 0 auto;
 }
-
-
