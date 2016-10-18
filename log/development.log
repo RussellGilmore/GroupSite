@@ -26401,3 +26401,458 @@ RoomChannel#speak({"message"=>"ahoy"})
 [ActiveJob] [MessageBroadcastJob] [5aaf9136-4414-4c8d-b897-6614dd17b976] [ActionCable] Broadcasting to room_channel: {:message=>"<div class=\"message\">\n  <p>Anonymous : ahoy</p>\n</div>"}
 [ActiveJob] [MessageBroadcastJob] [5aaf9136-4414-4c8d-b897-6614dd17b976] Performed MessageBroadcastJob from Async(default) in 189.01ms
 RoomChannel transmitting {"message"=>"<div class=\"message\">\n  <p>Anonymous : ahoy</p>\n</div>"} (via streamed from room_channel)
+Started GET "/" for ::1 at 2016-10-18 09:15:28 -0400
+  
+Mysql2::Error (Access denied for user 'root'@'localhost' (using password: YES)):
+  
+mysql2-0.4.4-x86 (mingw32) lib/mysql2/client.rb:87:in `connect'
+mysql2-0.4.4-x86 (mingw32) lib/mysql2/client.rb:87:in `initialize'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `new'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/mysql2_adapter.rb:25:in `mysql2_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:721:in `new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:765:in `checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:744:in `try_to_checkout_new_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:705:in `acquire_connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:501:in `checkout'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:875:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:558:in `connection'
+activerecord (5.0.0.1) lib/active_record/migration.rb:545:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0.1) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `call'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (1390.7ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from const_missing at C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/actionpack-5.0.0.1/lib/action_dispatch/http/mime_type.rb:52)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (1248.7ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendering C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.2.0/lib/ruby/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (2896.4ms)
+Started GET "/" for ::1 at 2016-10-18 09:17:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (6.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (3.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 1983ms (Views: 1924.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for ::1 at 2016-10-18 09:18:02 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2016-10-18 09:18:03 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:18:04 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (28.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (1.0ms)
+  Rendered pages/text_chat.html.erb within layouts/application (81.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 316ms (Views: 241.6ms | ActiveRecord: 47.5ms)
+
+
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:18:07 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (1.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 320ms (Views: 301.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:18:08 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 217ms (Views: 199.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:18:09 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (0.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 222ms (Views: 206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:18:09 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (16.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 215ms (Views: 198.9ms | ActiveRecord: 1.5ms)
+
+
+  [1m[35m (14.0ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (10.5ms)[0m  [1m[34mSELECT GET_LOCK('8016460668483744435', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8016460668483744435')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSHOW CREATE TABLE `messages`[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'messages'[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'groupsite_development'
+  AND fk.table_name = 'messages'
+[0m
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:18:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (26.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 691ms (Views: 656.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cable" for ::1 at 2016-10-18 09:18:59 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2016-10-18 09:18:59 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:19:01 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (0.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (2.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 264ms (Views: 249.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:19:01 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 203ms (Views: 189.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:19:02 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (17.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 244ms (Views: 228.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-18 09:19:02 -0400
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 218ms (Views: 204.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:19:04 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (16.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 217ms (Views: 201.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:19:05 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 208ms (Views: 194.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:19:05 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 213ms (Views: 199.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:19:06 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (15.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 207.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-18 09:19:06 -0400
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 227ms (Views: 211.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:19:07 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (17.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 234ms (Views: 220.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:19:07 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 202ms (Views: 188.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-18 09:19:08 -0400
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (0.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 215ms (Views: 200.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:19:09 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (15.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 229ms (Views: 214.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:20:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (26.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (2.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 682ms (Views: 643.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cable" for ::1 at 2016-10-18 09:20:10 -0400
+Started GET "/cable/" [WebSocket] for ::1 at 2016-10-18 09:20:10 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+RoomChannel is transmitting the subscription confirmation
+RoomChannel is streaming from room_channel
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:20:11 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 223ms (Views: 208.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:20:12 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 222ms (Views: 207.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-18 09:20:12 -0400
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 212ms (Views: 197.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:20:13 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (18.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.0ms)
+Completed 200 OK in 225ms (Views: 210.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/pages/drive" for ::1 at 2016-10-18 09:20:14 -0400
+Processing by PagesController#drive as HTML
+  Rendering pages/drive.html.erb within layouts/application
+  Rendered pages/drive.html.erb within layouts/application (0.0ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.0ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 204ms (Views: 190.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/video_chat" for ::1 at 2016-10-18 09:20:14 -0400
+Processing by PagesController#video_chat as HTML
+  Rendering pages/video_chat.html.erb within layouts/application
+  Rendered pages/video_chat.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 222ms (Views: 207.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-10-18 09:20:14 -0400
+Processing by PagesController#forum as HTML
+  Rendering pages/forum.html.erb within layouts/application
+  Rendered pages/forum.html.erb within layouts/application (0.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (1.0ms)
+Completed 200 OK in 225ms (Views: 210.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/text_chat" for ::1 at 2016-10-18 09:20:15 -0400
+Processing by PagesController#text_chat as HTML
+  Rendering pages/text_chat.html.erb within layouts/application
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages`[0m
+  Rendered collection of messages/_message.html.erb [7 times] (0.5ms)
+  Rendered pages/text_chat.html.erb within layouts/application (17.5ms)
+  Rendering layouts/header.html.erb
+  Rendered layouts/header.html.erb (1.5ms)
+  Rendering layouts/footer.html.erb
+  Rendered layouts/footer.html.erb (0.5ms)
+Completed 200 OK in 229ms (Views: 213.0ms | ActiveRecord: 1.5ms)
+
+

@@ -25,6 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# paperclip gem for file uploading
+gem 'paperclip'
+
+# dropzonejs-rails is for async multi-file uploading
+gem 'dropzonejs-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
