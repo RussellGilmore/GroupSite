@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :uploads
     root to: 'pages#forum'
 
     get 'pages/forum'      => 'pages#forum'
