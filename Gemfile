@@ -31,6 +31,11 @@ gem 'figaro'
 # Use devise for user accounts
 gem 'devise'
 
+gem 'omniauth-facebook'
+
+# Use the certified gem for update ca-certs
+gem 'certified'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
