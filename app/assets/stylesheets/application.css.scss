@@ -26,6 +26,7 @@ $navbar-default-link-active-bg: #3BA9E4;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 html{
     height: 100%;
     margin:0;
@@ -50,6 +51,8 @@ body{
 
 #content {
 	padding-bottom:100px; /* Height of the footer element */
+  padding-left: 10px;
+  padding-right: 10px;
 }
 #footer {
 	background:#efefef;

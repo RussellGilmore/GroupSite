@@ -1,7 +1,7 @@
 <h1>The Index</h1>
 <% @posts.each do |post| %>
-  <h2><%= post.title%><h2>
-  <%= link_to("View post", post_path(post), class: "btn btn-default") %>
+<h2><%= post.title%></h2>
+<%= link_to("View post", post_path(post), class: "btn btn-default") %>
 <%end %>
 
-<%= link_to("New post", new_post_path) %>
+<%= link_to("New post", new_post_path, class: "btn btn-default") %>
