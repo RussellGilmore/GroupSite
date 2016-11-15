@@ -25,9 +25,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Use figaro to manage environment variables
 gem 'figaro'
 
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
+
+# Use devise for user accounts
+gem 'devise'
+
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
+# Use the certified gem for update ca-certs
+gem 'certified'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
