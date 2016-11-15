@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     get 'pages/text_chat'  => 'pages#text_chat'
     get 'pages/drive'      => 'pages#drive'
     get 'pages/video_chat' => 'pages#video_chat'
+
+    resources :uploads
     resources :posts do
         resources :comments
     end

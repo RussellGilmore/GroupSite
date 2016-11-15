@@ -25,6 +25,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# paperclip gem for file uploading
+gem 'paperclip'
+
+# dropzonejs-rails is for async multi-file uploading
+gem 'dropzonejs-rails'
 # Use figaro to manage environment variables
 gem 'figaro'
 
