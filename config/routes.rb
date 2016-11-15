@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
-  resources :uploads
-    root to: 'pages#forum'
+    devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+
+    # redirect to the sign in page if the user is not authenticated
+    authenticated :user do
+        root to: 'posts#forum_index', as: :authenticated_root
+    end
+    root to: redirect('/users/sign_in')
 
     get 'pages/forum'      => 'pages#forum'
     get 'pages/text_chat'  => 'pages#text_chat'
     get 'pages/drive'      => 'pages#drive'
     get 'pages/video_chat' => 'pages#video_chat'
 
-    # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+    resources :uploads
+    resources :posts do
+        resources :comments
+    end
 end

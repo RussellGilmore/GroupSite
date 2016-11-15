@@ -1,20 +1,40 @@
 <!DOCTYPE html>
-<html>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+
+<html lang="en">
     <head>
         <title>Groupsite</title>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
-
     </head>
-    <body>
-        <%= render template: "layouts/header" %>
-        <div id="content">
-            <div class=container>
-                <%= yield %>
-            </div>
-        </div>
-        <%= render template: "layouts/footer" %>
-    </body>
 
-</html>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <%= render template: "layouts/header" %>
+            </div>
+            <div id="content">
+                <% if notice %>
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <%= notice %></div>
+                <% end %>
+                <% if alert %>
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <%= alert %></div>
+                <% end %>
+                <%= yield %>
+                <div id="footer">
+                    <%= render template: "layouts/footer" %>
+                </div>
+            </div>
+        </body>
+    </html>

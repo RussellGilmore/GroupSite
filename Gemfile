@@ -30,6 +30,19 @@ gem 'paperclip'
 
 # dropzonejs-rails is for async multi-file uploading
 gem 'dropzonejs-rails'
+# Use figaro to manage environment variables
+gem 'figaro'
+
+gem 'simple_form', '~> 3.3', '>= 3.3.1'
+
+# Use devise for user accounts
+gem 'devise'
+
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
+# Use the certified gem for update ca-certs
+gem 'certified'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

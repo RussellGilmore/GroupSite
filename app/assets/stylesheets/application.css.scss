@@ -27,31 +27,50 @@ $navbar-default-link-active-bg: #3BA9E4;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-html {
+
+html{
     height: 100%;
+    margin:0;
+  	padding:0;
     background-color: #34495e;
+
+}
+body{
+  height: 100%;
+  margin:0;
+  padding:0;
+  background-color: white;
+  width: 80%;
+  margin: 0 auto;
 }
 
-body {
-    background-color: white;
-    height: 100%;
-    width: 80%;
-    margin: 0 auto;
+#wrapper {
+	min-height:100%;
+	position:relative;
+  background-color: white;
+}
+
+#content {
+	padding-bottom:100px; /* Height of the footer element */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#footer {
+	background:#efefef;
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+.main-content{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  min-height: 100%
 }
 
 .navbar {
-    margin: 0 auto;
-}
-
-#footer {
-    height: 60px;
-    width: 80%;
-    background-color: #DEDEDE;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-}
-
-.page-header {
     margin: 0 auto;
 }
