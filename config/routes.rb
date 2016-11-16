@@ -16,4 +16,7 @@ Rails.application.routes.draw do
     resources :posts do
         resources :comments
     end
+
+    get 'users/password/change' => 'users#edit'
+    patch 'users/password/update' => 'users#update'
 end
