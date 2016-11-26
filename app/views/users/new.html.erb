@@ -1,0 +1,25 @@
+<h2>Sign up</h2>
+
+<%= form_for(@user, url: users_create_url ) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :registration_key %><br/>
+    <%= f.text_field :registration_key, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :username %><br/>
+    <%= f.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br/>
+    <%= f.email_field :email%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
     devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
 
+    devise_scope :user do
+        post 'users/create', to: 'users/omniauth_callbacks#create', as: 'users_create'
+    end
     # redirect to the sign in page if the user is not authenticated
     authenticated :user do
         root to: 'posts#forum_index', as: :authenticated_root

@@ -6,19 +6,31 @@ class User < ApplicationRecord
            :confirmable, :lockable, :timeoutable,
            :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
 
+    validates :username,
+              presence: true,
+              uniqueness: {
+                  case_sensitive: false
+              }
+    validates :registration_key,
+              on: :create,
+              presence: true
+    validate :registration_key_exists
+
+    # Only allow letter, number, underscore and punctuation.
+    # validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
+
+    after_create :delete_registration_key
+
     # Add a virtual attribute for authenticating by either username or email
     # This field is not persisted. It is only used in controllers and views.
     attr_accessor :login
+    attr_accessor :registration_key
 
     # Maps the data from the OAuth response to the User model
     def self.from_omniauth(auth)
-        username = auth.info.email.split(/@/)[0]
-        already_used = User.where(username: username).first
-        username = auth.info.email if already_used
-        where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-            user.username = username
+        where(provider: auth.provider, uid: auth.uid).first_or_initialize do |user|
+            user.username = auth.info.nickname if auth.info.nickname
             user.email = auth.info.email
-            user.password = Devise.friendly_token[0, 20]
         end
     end
 
@@ -36,11 +48,15 @@ class User < ApplicationRecord
         end
     end
 
-    validates :username,
-              presence: true,
-              uniqueness: {
-                  case_sensitive: false
-              }
-    # Only allow letter, number, underscore and punctuation.
-    # validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
+    # validates that the registration key exists.
+    def registration_key_exists
+        key = RegistrationKey.find_by_key registration_key
+        errors.add(:registration_key, 'is not a valid registration key') unless key
+    end
+
+    # Removes the registration key after_create to prevent reuse
+    def delete_registration_key
+        key = RegistrationKey.find_by_key registration_key
+        key.destroy if key
+    end
 end
