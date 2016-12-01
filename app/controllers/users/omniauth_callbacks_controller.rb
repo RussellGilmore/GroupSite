@@ -43,8 +43,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
         if @user.persisted?
             session.delete :provider
             session.delete :uid
-            sign_in_and_redirect @user, event: :authentication # this will throw if @user is not activated
-            set_flash_message(:notice, :success, kind: @user.provider == :facebook ? 'Facebook' : 'Google') if is_navigational_format?
+            flash[:notice] = I18n.t 'devise.registrations.signed_up_but_unconfirmed'
+            redirect_to new_user_session_path
         else
             render 'users/new'
       end
