@@ -26,6 +26,8 @@ class User < ApplicationRecord
     attr_accessor :login
     attr_accessor :registration_key
 
+    has_many :messages
+
     # Maps the data from the OAuth response to the User model
     def self.from_omniauth(auth)
         where(provider: auth.provider, uid: auth.uid).first_or_initialize do |user|
