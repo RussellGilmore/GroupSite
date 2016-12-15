@@ -14,7 +14,7 @@ class User < ApplicationRecord
     validates :registration_key,
               on: :create,
               presence: true
-    validate :registration_key_exists
+    validate :registration_key_exists, on: :create
 
     # Only allow letter, number, underscore and punctuation.
     # validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
